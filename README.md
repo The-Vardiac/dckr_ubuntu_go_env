@@ -1,0 +1,2 @@
+- Ubuntu version: 24.04
+- Go version: 1.25.5-alpine3.23
