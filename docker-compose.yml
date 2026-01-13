@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    image: ubuntu24.04-sandbox-a-img
+    container_name: ubuntu24.04-sandbox-a-cnt
+    volumes:
+      - ./src:/opt/Dev
+    ports:
+      - "8000:8000"
+    networks:
+      - sandbox-net
+    tty: true # docker run -i
+    stdin_open: true # docker run -t
+
+networks:
+  sandbox-net:
+    name: sandbox-net
+    driver: bridge
